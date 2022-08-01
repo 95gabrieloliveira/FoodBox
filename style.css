@@ -10,15 +10,19 @@ body {
 .topo {
     background-color: red;
     color: white;
-    padding: 5px;
+    padding: 15px;
     border-radius: 10px ;
+    box-shadow: 0 0 10px 0 #bbbbbb;
 }
 
 .produto {
     background: white;
     padding: 15px;
     border-radius: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px 0 #bbbbbb;
+    cursor: pointer;
+    border: 5px solid white;
 }
 
 h2 {
@@ -39,4 +43,11 @@ img {
     width: 130px;
     border-radius: 5px;
     float: right;
+    margin-left: 15px;
+}
+
+.botao {
+    background: #0b940b;
+    text-align: center;
+    
 }
