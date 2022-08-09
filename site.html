@@ -21,7 +21,7 @@
     <p><strong>R$ 19,90</strong></p>
    </div>
    
-   <div class="produto">
+   <div id="carne" class="produto" onclick="escolherCarne()">
     <img src="https://img.elo7.com.br/product/zoom/265C0EA/adesivo-parede-prato-comida-frango-salada-restaurante-lindo-adesivo-decorativo-frango.jpg" alt="">
     <h4>Carne com Salada</h4>
     <p>Salada, com tiras de carne</p>
@@ -29,7 +29,7 @@
    </div>
    
    <h3> Agora, sua bebida</h3>
-   <div class="produto">
+   <div id="coca" class="produto" onclick="escolherCoca()">
     <img src="https://img.elo7.com.br/product/zoom/265C0EA/adesivo-parede-prato-comida-frango-salada-restaurante-lindo-adesivo-decorativo-frango.jpg" alt="">
     <h4>Coca-cola gelada</h4>
     <p>Uma coca gelada para refrescar</p>
@@ -37,21 +37,83 @@
    </div>
    
    
-   <div class="produto">
+   <div id="suco" class="produto" onclick="escolherSuco()">
     <img src="https://img.elo7.com.br/product/zoom/265C0EA/adesivo-parede-prato-comida-frango-salada-restaurante-lindo-adesivo-decorativo-frango.jpg" alt="">
-    <h4>Frango Yin-Yang</h4>
-    <p>Um pouco de batata, um pouco de salada</p>
-    <p><strong>R$ 19,90</strong></p>
-   </div>
-  
-   <div class="produto">
-    Alguma coisa
+    <h4>Suco Gelado</h4>
+    <p>Suco de poupa gelado para refrescar</p>
+    <p><strong>R$ 7,00</strong></p>
    </div>
 
+   <h3> Por fim, sua sobremesa</h3>
+  
+   <div id="pudim" class="produto" onclick="escolherPudim()">
+    <img src="https://img.elo7.com.br/product/zoom/265C0EA/adesivo-parede-prato-comida-frango-salada-restaurante-lindo-adesivo-decorativo-frango.jpg" alt="">
+    <h4>Pudim</h4>
+    <p>Um delicioso pudim de doce de leite</p>
+    <p><strong>R$ 8,00</strong></p>
+   </div>
+
+   <div id="sorvete" class="produto" onclick="escolherSorvete()">
+    <img src="https://img.elo7.com.br/product/zoom/265C0EA/adesivo-parede-prato-comida-frango-salada-restaurante-lindo-adesivo-decorativo-frango.jpg" alt="">
+    <h4>Pudim</h4>
+    <p>Um geladinho sorvete de vários sabores</p>
+    <p><strong>R$ 8,00</strong></p>
+   </div>
+
+   <div class="botao" onclick="finalizarPedido">
+   Finalizar Pedido
+    </div>
+
+
+
+
+
    <script>
+   
+        let prato;
+
         function escolherFrango () {
-        document.getElementById("frango").style.borderColor = "grenn";
+        document.getElementById("frango").style.borderColor = "green";
+        document.getElementById("carne").style.borderColor = "white";
+        
+        prato = "Frango";
     }
+
+    function escolherCarne () {
+        document.getElementById("carne").style.borderColor = "green";
+        document.getElementById("frango").style.borderColor = "white";
+        prato = "Carne";
+    }
+
+
+    function escolherCoca () {
+        document.getElementById("coca").style.borderColor = "green";
+        document.getElementById("suco").style.borderColor = "white";
+    }
+
+    function escolherSuco () {
+        document.getElementById("suco").style.borderColor = "green";
+        document.getElementById("coca").style.borderColor = "white";
+    }
+
+    function escolherPudim () {
+        document.getElementById("pudim").style.borderColor = "green";
+        document.getElementById("sorvete").style.borderColor = "white";
+    
+    }
+
+    function escolherSorvete () {
+        document.getElementById("sorvete").style.borderColor = "green";
+        document.getElementById("pudim").style.borderColor = "white";
+    
+    }
+
+    function finalizarPedido (){
+        alert (prato);
+        
+    }
+
+
 
 
    </script>
