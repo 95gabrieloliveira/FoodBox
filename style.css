@@ -49,5 +49,11 @@ img {
 .botao {
     background: #0b940b;
     text-align: center;
-    
+    font-size: 20px;
+    float: right;
+}
+
+.botao:hover {
+    color: black;
+    background-color: rgb(32, 158, 16);
 }

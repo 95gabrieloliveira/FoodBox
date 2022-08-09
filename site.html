@@ -60,8 +60,9 @@
     <p><strong>R$ 8,00</strong></p>
    </div>
 
-   <div class="botao" onclick="finalizarPedido">
-   Finalizar Pedido
+   <div onclick="finalizarPedido()">
+    <button class="botao">
+   Finalizar Pedido 
     </div>
 
 
@@ -71,6 +72,8 @@
    <script>
    
         let prato;
+        let bebida;
+        let sobremesa;
 
         function escolherFrango () {
         document.getElementById("frango").style.borderColor = "green";
@@ -89,27 +92,34 @@
     function escolherCoca () {
         document.getElementById("coca").style.borderColor = "green";
         document.getElementById("suco").style.borderColor = "white";
+        bebida = "Coca"
     }
 
     function escolherSuco () {
         document.getElementById("suco").style.borderColor = "green";
         document.getElementById("coca").style.borderColor = "white";
+        bebida = "Suco";
     }
 
     function escolherPudim () {
         document.getElementById("pudim").style.borderColor = "green";
         document.getElementById("sorvete").style.borderColor = "white";
-    
+        sobremesa = "Pudim"
+
     }
 
     function escolherSorvete () {
         document.getElementById("sorvete").style.borderColor = "green";
         document.getElementById("pudim").style.borderColor = "white";
-    
+     sobremesa = "Sorvete";
     }
 
     function finalizarPedido (){
-        alert (prato);
+        let mensagem;
+
+        mensagem = "Olá gostaria de pedir um combo " + prato +", " + bebida +" e " + sobremesa;
+
+       window.open("https://wa.me/+952154236?text=" + mensagem)
         
     }
 
